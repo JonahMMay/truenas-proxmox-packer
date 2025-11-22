@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout packer repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: ${{ env.PACKER_REPO }}
 
@@ -72,7 +72,7 @@ jobs:
           echo "artifactRepo=$REPO_NAME" >> "$GITHUB_OUTPUT"
 
       - name: Checkout plugin source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: ${{ env.PLUGIN_SOURCE_REPO }}
           path: plugin-source
